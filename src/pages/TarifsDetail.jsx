@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Link as ScrollLink, Element } from 'react-scroll';
 
 const tarifsData = [
@@ -79,6 +79,20 @@ const tarifsData = [
 ];
 
 const TarifsDetail = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const hash = location.hash.substring(1);
+      const target = document.getElementById(hash);
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   return (
     <section className="bg-[#f0fbfd] min-h-screen py-16 px-4 lg:px-24">
       <div className="max-w-6xl mx-auto">
@@ -109,7 +123,7 @@ const TarifsDetail = () => {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {tarifsData.map(({ id, emoji, title, rows }) => (
-            <Element name={id} key={id}>
+            <Element name={id} id={id} key={id}>
               <TarifTable title={`${emoji} ${title}`} rows={rows} />
             </Element>
           ))}
@@ -130,7 +144,9 @@ const TarifsDetail = () => {
 
 const TarifTable = ({ title, rows }) => (
   <div className="bg-white rounded-xl shadow-md overflow-hidden">
-    <h3 className="text-xl font-bold text-center text-[#03A9C9] py-4 border-b">{title}</h3>
+    <h3 className="text-xl font-bold text-center text-[#03A9C9] py-4 border-b">
+      {title}
+    </h3>
     <table className="w-full text-left">
       <thead>
         <tr className="bg-[#e6f7f8] text-[#104051] font-semibold text-sm">
