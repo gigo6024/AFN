@@ -1,14 +1,11 @@
-import React from 'react'; 
+import React from 'react';
 
 const Navbar = () => {
   return (
     <nav className="bg-white shadow-sm py-4 px-6 flex justify-between items-center sticky top-0 z-50">
-      {/* Logo */}
+      {/* Logo uniquement */}
       <div className="flex items-center gap-4">
-        <img src="/logo.png" alt="FAN Logo" className="h-20 w-auto" />
-        <span className="text-2xl font-bold text-[#104051]">
-          France <span className="text-[#03A9C9]">All Nuisibles</span>
-        </span>
+        <img src="/logo-afn.png" alt="Logo AFN" className="h-24 w-auto" />
       </div>
 
       {/* Menu */}
