@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const tarifs = [
   {
     title: 'Traitement Chimique',
-    price: 'À partir de 79€',
+    price: 'À partir de 160€',
     description:
       'Méthode radicale contre les insectes nuisibles. Efficacité rapide, nécessite parfois un retrait temporaire du domicile.',
     emoji: '🧴',
@@ -12,7 +12,7 @@ const tarifs = [
   },
   {
     title: 'Traitement Vapeur',
-    price: 'À partir de 99€',
+    price: 'À partir de 290€',
     description:
       'Solution écologique à haute température. Idéal pour matelas, textiles et recoins difficiles d’accès.',
     emoji: '💨',
@@ -20,7 +20,7 @@ const tarifs = [
   },
   {
     title: 'Traitement Cryogénique',
-    price: 'À partir de 119€',
+    price: 'À partir de 879€',
     description:
       'Gèle instantanément les nuisibles avec du CO2 à -78°C. Sans produits chimiques, idéal pour les environnements sensibles.',
     emoji: '❄️',
@@ -28,7 +28,7 @@ const tarifs = [
   },
   {
     title: 'Traitement Thermique',
-    price: 'À partir de 149€',
+    price: 'À partir de 1280€',
     description:
       'Éradique tous les stades des nuisibles par chaleur. Efficace en une seule intervention.',
     emoji: '🔥',
